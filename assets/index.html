@@ -23,12 +23,9 @@
         <h1>Online Password Manager</h1>
 
         <form id="decrypt" class="well form-inline" autocomplete="off">
-            <input type="password" id="encryptionKey" placeholder="master-key" class="form-control">
+            <input type="password" id="encryptionKey" placeholder="master key" class="form-control">
             <button class="btn"><i class="icon-lock-open"></i> Decrypt</button>
         </form>
-
-        <h2 id="testPhrase">Do not login!</h2>
-        <p>Do <em>NOT</em> login unless the phrase above is illegible!</p>
     </div>
 </section>
 
@@ -52,7 +49,7 @@
             </div>
         </div>
 
-    <!--- </div> -->
+    <!-- </div> -->
         <table class="table table-striped" id="tableHeader">
             <thead>
                 <tr>
@@ -64,7 +61,7 @@
     </nav>
 
 
-<!--- <span id="lastModified">This list was last modified on <span id="modifiedDate">6 september 2012</span>.</span> --->
+<!-- <span id="lastModified">This list was last modified on <span id="modifiedDate">6 september 2012</span>.</span> -->
 
     <div class="wide-container">
         <table class="table table-striped" id="overview">
@@ -79,6 +76,7 @@
                     <td><div class="obscured">Dummy</div></td>
                     <td><table class="comment">Dummy</table></td><td>Dummy</td>
                     <td>
+                        <a class="copyPassword"><i class="icon-docs"></i></a>
                         <a class="toggleVisibility"><i class="icon-eye"></i><i class="icon-closed-eye"></i></a>
                         <a class="editPassword"><i class="icon-edit"></i></a>
                         <a class="deletePassword"><i class="icon-trash"></i></a>
@@ -88,7 +86,7 @@
         </table>
     </div>
 
-    <!---- new password/ edit password window --->
+    <!-- new password/ edit password window -->
     <div class="modal visible-modal hidden" id="editModal">
     <div class="modal-dialog">
     <div class="modal-content">
@@ -152,7 +150,7 @@
     </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <!--- masterkey edit window -->    
+    <!-- masterkey edit window -->    
     <div class="modal visible-modal hidden" id="masterkeyModal">
     <div class="modal-dialog">
     <div class="modal-content">

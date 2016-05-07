@@ -322,6 +322,21 @@ window.onload = function() {
         evt.preventDefault();
     }
 
+    function copyPassword(evt) {
+        var passwordField = this.parentNode.parentNode.childNodes[2];
+        var range = document.createRange();  
+        range.selectNode(passwordField);
+        window.getSelection().addRange(range);
+
+        try {  
+            var successful = document.execCommand('copy');
+        } catch(err) {  
+            window.alert('Oops, unable to copy');  
+        }
+
+        window.getSelection().removeAllRanges();
+    }
+
     function logout() {
         listManager = null;
         cryptoManager = null;
@@ -377,6 +392,13 @@ window.onload = function() {
     function addLinks(row, isOnline) {
         let node = document.createElement('td');
         let link = document.createElement('a');
+        link.href = '#';
+        link.classList.add('copyPassword');
+        link.innerHTML = '<i class="icon-docs"></i>';
+        link.addEventListener('click', copyPassword);
+        node.appendChild(link);
+
+        link = document.createElement('a');
         link.href = '#';
         link.classList.add('toggleVisibility');
         link.innerHTML = '<i class="icon-eye"></i>';
